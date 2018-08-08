@@ -25,6 +25,8 @@ The goals / steps of this project are the following:
 [image9]: ./output_images/warped7.jpg "Warped Image 8"
 [image10]: ./output_images/thresh_binary.JPG "Threshold Binary Image"
 [image11]: ./output_images/perspective_transform_confirm.JPG "Confirm Perspective Transform"
+[image12]: ./output_images/top_dowm_wpoly.JPG "Top-Down w/ Polynomial"
+[image12]: ./output_images/curvature_values.JPG "Radius of Curvature"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -82,9 +84,9 @@ The code for my perspective transform includes a function called `unwarp_lane()`
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+Then I then used the implementation from the lessons to fit a polynomial to the found lane pixels with the window method. Here is the result:
 
-![alt text][image5]
+![alt text][image12]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 I did this in lines # through # in my code in `my_other_file.py`
