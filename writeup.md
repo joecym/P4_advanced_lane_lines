@@ -1,3 +1,4 @@
+
 ## P4 Advanced Lane Lines Writeup
 ## Joe Cymerman
 ## 8 August 2018
@@ -17,7 +18,8 @@ The goals / steps of this project are the following:
 [image1]: ./output_images/warped_check.jpg "Warped Chess Board"
 [image2]: ./output_images/warped0.jpg "Warped Image 1"
 [image3]: ./output_images/warped1.jpg "Warped Image 2"
-[image4]: ./output_images/warped2.jpg "Warped Image 3"[image5]: ./output_images/warped3.jpg "Warped Image 4"
+[image4]: ./output_images/warped2.jpg "Warped Image 3"
+[image5]: ./output_images/warped3.jpg "Warped Image 4"
 [image6]: ./output_images/warped4.jpg "Warped Image 5"
 [image7]: ./output_images/warped5.jpg "Warped Image 6"
 [image8]: ./output_images/warped6.jpg "Warped Image 7"
