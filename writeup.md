@@ -64,6 +64,7 @@ coliI then used the output `objpoints` and `imgpoints` to compute the camera cal
 #### 1. Provide an example of a distortion-corrected image.
 
 In this step, I used the same mtx and dist that I found from the chessboard calibration. Here are the results of my unwarped images:
+
 ![alt text][image2]
 ![alt text][image3]
 ![alt text][image4]
