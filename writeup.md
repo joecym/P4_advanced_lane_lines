@@ -23,12 +23,10 @@ The goals / steps of this project are the following:
 [image8]: ./output_images/warped6.jpg "Warped Image 7"
 [image9]: ./output_images/warped7.jpg "Warped Image 8"
 [image10]: ./output_images/thresh_binary.JPG "Threshold Binary Image"
-[image11]: ./output_images/perspective_transform_confirm.JPG "Confirm Perspective Transform"
-[image12]: ./output_images/top_dowm_wpoly.JPG "Top-Down w/ Polynomial"
+[image11]: ./output_images/perspective_transform_confirm.JPG "Confirm Perspective Transform"[image12]: ./output_images/top_dowm_wpoly.JPG "Top-Down w/ Polynomial"
 [image13]: ./output_images/curvature_values.JPG "Radius of Curvature"
 [image14]: ./output_images/poly0.jpg "Poly Image 1"
-[image15]: ./output_images/poly1.jpg "Poly Image 2"
-[image16]: ./output_images/poly2.jpg "Poly Image 3"
+[image15]: ./output_images/poly1.jpg "Poly Image 2"[image16]: ./output_images/poly2.jpg "Poly Image 3"
 [image17]: ./output_images/poly3.jpg "Poly Image 4"
 [image18]: ./output_images/poly4.jpg "Poly Image 5"
 [image19]: ./output_images/poly5.jpg "Poly Image 6"
@@ -54,16 +52,15 @@ You're reading it!
 The code for this step is contained in the first code cell of the IPython notebook located in "./P4_advanced_lane_lines.ipynb."
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
-oliI then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
+coliI then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-n![alt text][image1]
+![alt text][image1]
 
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
 In this step, I used the same mtx and dist that I found from the chessboard calibration. Here are the results of my unwarped images:
-
 ![alt text][image2]
 ![alt text][image3]
 ![alt text][image4]
@@ -137,6 +134,6 @@ Here's a [link to my video result](https://youtu.be/MmToBpwUnKw)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
+I honestly had the most issues storing and appending the desired arrays in global variables. For some reason it was challenging to perform the appending and averaging over the correct axes, so it took me some time. The other challenge was fine tuning the source and destination points to accomplish the top-down perspective transform. I saw from the writeup template that you made a clever way to perform this automatically based on the image dimensions, which was a nice way to do it. My implementation won't work on other videos because the images are slightly different. 
 
-
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+To make it more robust, I would not hard code values for source points. I would also use some more advanced schemes for line smoothing, instead of a straight average of the last three frames. Using a differential method might be my next step. 
