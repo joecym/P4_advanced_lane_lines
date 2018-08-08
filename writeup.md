@@ -71,6 +71,7 @@ In the 5th input box of my notebook, I consolidated the various transform functi
 
 After some thought and review of the lessons, I abandoned this approach and used the built-in OpenCV functions for the HLS and Sobel transforms. I then used thresholds for the x gradient and color channel and combined the effects on a single binary image. Here is the result:
 
+
 ![alt text][image10]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
