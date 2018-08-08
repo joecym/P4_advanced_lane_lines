@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/warped_check.jpg "Warped Chess Board"
+[image1]: ./output_images/warped0.jpg "Warped Chess Board"
 [image2]: ./output_images/warped0.jpg "Warped Image 1"
 [image3]: ./output_images/warped1.jpg "Warped Image 2"
 [image4]: ./output_images/warped2.jpg "Warped Image 3"
