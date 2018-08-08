@@ -1,7 +1,6 @@
 ## P4 Advanced Lane Lines Writeup
 ## Joe Cymerman
 ## 8 August 2018
-
 The goals / steps of this project are the following:
 
 * Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
@@ -18,18 +17,18 @@ The goals / steps of this project are the following:
 [image1]: ./output_images/warped_check.jpg "Warped Chess Board"
 [image2]: ./output_images/warped0.jpg "Warped Image 1"
 [image3]: ./output_images/warped1.jpg "Warped Image 2"
-[image4]: ./output_images/warped2.jpg "Warped Image 3"
-[image5]: ./output_images/warped3.jpg "Warped Image 4"
+[image4]: ./output_images/warped2.jpg "Warped Image 3"[image5]: ./output_images/warped3.jpg "Warped Image 4"
 [image6]: ./output_images/warped4.jpg "Warped Image 5"
 [image7]: ./output_images/warped5.jpg "Warped Image 6"
 [image8]: ./output_images/warped6.jpg "Warped Image 7"
 [image9]: ./output_images/warped7.jpg "Warped Image 8"
+[image10]: ./output_images/thresh_binary.jpg "Threshold Binary Image"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
----
+ ---
 
 ### Writeup / README
 
@@ -45,7 +44,7 @@ The code for this step is contained in the first code cell of the IPython notebo
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
-I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
+iI then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
 ![alt text][image1]
 
@@ -65,8 +64,12 @@ In this step, I used the same mtx and dist that I found from the chessboard cali
 ![alt text][image9]
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
+
 In the 5th input box of my notebook, I consolidated the various transform functions from the lessons, and then applied each to all of the test images, forming a grid of images and the effects. 
-![alt text][image3]
+
+After some thought and review of the lessons, I abandoned this approach and used the built-in OpenCV functions for the HLS and Sobel transforms. I then used thresholds for the x gradient and color channel and combined the effects on a single binary image. Here is the result:
+
+![alt text][image10]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
