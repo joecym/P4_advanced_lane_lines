@@ -1,3 +1,4 @@
+
 # P4 Advanced Lane Lines Writeup
 ## Joe Cymerman
 ## 8 August 2018
@@ -27,7 +28,8 @@ The goals / steps of this project are the following:
 [image12]: ./output_images/top_dowm_wpoly.JPG "Top-Down w/ Polynomial"
 [image13]: ./output_images/curvature_values.JPG "Radius of Curvature"
 [image14]: ./output_images/poly0.jpg "Poly Image 1"
-[image15]: ./output_images/poly1.jpg "Poly Image 2"[image16]: ./output_images/poly2.jpg "Poly Image 3"
+[image15]: ./output_images/poly1.jpg "Poly Image 2"
+[image16]: ./output_images/poly2.jpg "Poly Image 3"
 [image17]: ./output_images/poly3.jpg "Poly Image 4"
 [image18]: ./output_images/poly4.jpg "Poly Image 5"
 [image19]: ./output_images/poly5.jpg "Poly Image 6"
