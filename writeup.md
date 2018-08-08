@@ -33,7 +33,7 @@ The goals / steps of this project are the following:
 
 ### Writeup / README
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.    
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.   
 
 You're reading it!
 
@@ -53,7 +53,7 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 #### 1. Provide an example of a distortion-corrected image.
 
-In this step, I made an "unwarp2" function that used the same method in paragraph 1; however, this version has different object and image points that are specific to the lane lines, and not the chessboard. Here are the results of my unwarped images:
+In this step, I used the same mtx and dist that I found from the chessboard calibration. Here are the results of my unwarped images:
 
 ![alt text][image2]
 ![alt text][image3]
@@ -65,9 +65,7 @@ In this step, I made an "unwarp2" function that used the same method in paragrap
 ![alt text][image9]
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
-
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
-
+In the 5th input box of my notebook, I consolidated the various transform functions from the lessons, and then applied each to all of the test images, forming a grid of images and the effects. 
 ![alt text][image3]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
