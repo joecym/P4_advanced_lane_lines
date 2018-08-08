@@ -22,8 +22,8 @@ The goals / steps of this project are the following:
 [image6]: ./output_images/warped4.jpg "Warped Image 5"
 [image7]: ./output_images/warped5.jpg "Warped Image 6"
 [image8]: ./output_images/warped6.jpg "Warped Image 7"
-[image10]: ./output_images/warped7.jpg "Warped Image 8"
-[image9]: ./output_images/thresh_binary.jpg "Threshold Binary Image"
+[image9]: ./output_images/warped7.jpg "Warped Image 8"
+[image10]: ./output_images/curvature_values.jpg "Threshold Binary Image"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
