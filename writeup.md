@@ -1,10 +1,6 @@
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
-
-**Advanced Lane Finding Project**
+## P4 Advanced Lane Lines Writeup
+## Joe Cymerman
+## 8 August 2018
 
 The goals / steps of this project are the following:
 
@@ -19,12 +15,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/undistort_output.png "Undistorted"
-[image2]: ./test_images/test1.jpg "Road Transformed"
-[image3]: ./examples/binary_combo_example.jpg "Binary Example"
-[image4]: ./examples/warped_straight_lines.jpg "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
+[image1]: ./output_images/
+[image2]: ./output_images/
+[image3]: ./output_images/ "Binary Example"
+[image4]: ./output_images/ "Warp Example"
+[image5]: ./output_images/ "Fit Visual"
+[image6]: ./output_images/ "Output"
 [video1]: ./project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
