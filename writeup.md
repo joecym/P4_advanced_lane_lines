@@ -121,12 +121,22 @@ I defined a function `polyfil` to create the shaded green area on my test images
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+My pipeline, in `process image` begins with a declaration of global variabes to hold information on the left and right lane lines, as suggested in the prompt. 
+
+I unwarped the image and attempted to fit a polynomial to the lane lines. Sometimes this is unsuccessful, so I could declare right away on some instances when my image processing did not work. 
+
+I stored the curves in `line.allx` that my conditional statements deemed to be acceptable. They compared the given curve fit to the average of the previous three frames. If they deviated too much, that curve was discarded and replaced with the average stored in `line.bestx`. 
+
+I then drew the shaded green area as done previously.
+
+Here's a [link to my video result](https://youtu.be/MmToBpwUnKw)
 
 ---
 
 ### Discussion
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+
+
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
