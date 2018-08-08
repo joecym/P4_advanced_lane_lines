@@ -47,9 +47,9 @@ The code for this step is contained in the first code cell of the IPython notebo
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
-iI then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
+oliI then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-![alt text][image1]
+n![alt text][image1]
 
 ### Pipeline (single images)
 
@@ -57,9 +57,9 @@ iI then used the output `objpoints` and `imgpoints` to compute the camera calibr
 
 In this step, I used the same mtx and dist that I found from the chessboard calibration. Here are the results of my unwarped images:
 
-![alt text][image2]
+tf![alt text][image2]
 ![alt text][image3]
-![alt text][image4]
+f![alt text][image4]
 ![alt text][image5]
 ![alt text][image6]
 ![alt text][image7]
@@ -89,7 +89,7 @@ Then I then used the implementation from the lessons to fit a polynomial to the 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-In the 20th code box, I defined a function to evaluate the curvature and here is the result:
+In the 20th code box, I defined a function to evaluate the curvature and here are the resulting left and right curvatures for each of the eight test images:
 
 ![alt text][image13]
 
@@ -97,7 +97,7 @@ Also, the position of the vehicle can be related by extracting the coordinates o
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+nuI defined a f`pol   Here is an example of my result on a test image:
 
 ![alt text][image6]
 
