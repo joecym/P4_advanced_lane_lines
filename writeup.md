@@ -4,8 +4,7 @@
 The goals / steps of this project are the following:
 
 * Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
-* Apply a distortion correction to raw images.
-* Use color transforms, gradients, etc., to create a thresholded binary image.
+* Apply a distortion correction to raw images.* Use color transforms, gradients, etc., to create a thresholded binary image.
 * Apply a perspective transform to rectify binary image ("birds-eye view").
 * Detect lane pixels and fit to find the lane boundary.
 * Determine the curvature of the lane and vehicle position with respect to center.
@@ -26,7 +25,7 @@ The goals / steps of this project are the following:
 [image10]: ./output_images/thresh_binary.JPG "Threshold Binary Image"
 [image11]: ./output_images/perspective_transform_confirm.JPG "Confirm Perspective Transform"
 [image12]: ./output_images/top_dowm_wpoly.JPG "Top-Down w/ Polynomial"
-[image12]: ./output_images/curvature_values.JPG "Radius of Curvature"
+[image13]: ./output_images/curvature_values.JPG "Radius of Curvature"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -89,7 +88,12 @@ Then I then used the implementation from the lessons to fit a polynomial to the 
 ![alt text][image12]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
-I did this in lines # through # in my code in `my_other_file.py`
+
+In the 20th code box, I defined a function to evaluate the curvature and here is the result:
+
+![alt text][image13]
+
+Also, the position of the vehicle can be related by extracting the coordinates of the start of the left and right lane curves, and then comparing the differnece to the coordinate of the center of the image. 
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
