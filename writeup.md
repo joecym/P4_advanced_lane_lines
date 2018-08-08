@@ -1,4 +1,4 @@
-## P4 Advanced Lane Lines Writeup
+# P4 Advanced Lane Lines Writeup
 ## Joe Cymerman
 ## 8 August 2018
 The goals / steps of this project are the following:
@@ -26,6 +26,14 @@ The goals / steps of this project are the following:
 [image11]: ./output_images/perspective_transform_confirm.JPG "Confirm Perspective Transform"
 [image12]: ./output_images/top_dowm_wpoly.JPG "Top-Down w/ Polynomial"
 [image13]: ./output_images/curvature_values.JPG "Radius of Curvature"
+[image14]: ./output_images/poly0.jpg "Poly Image 1"
+[image15]: ./output_images/poly1.jpg "Poly Image 2"
+[image16]: ./output_images/poly2.jpg "Poly Image 3"
+[image17]: ./output_images/poly3.jpg "Poly Image 4"
+[image18]: ./output_images/poly4.jpg "Poly Image 5"
+[image19]: ./output_images/poly5.jpg "Poly Image 6"
+[image20]: ./output_images/poly6.jpg "Poly Image 7"
+[image21]: ./output_images/poly7.jpg "Poly Image 8"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -44,7 +52,6 @@ You're reading it!
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
 The code for this step is contained in the first code cell of the IPython notebook located in "./P4_advanced_lane_lines.ipynb."
-
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
 oliI then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
@@ -57,9 +64,9 @@ n![alt text][image1]
 
 In this step, I used the same mtx and dist that I found from the chessboard calibration. Here are the results of my unwarped images:
 
-tf![alt text][image2]
+![alt text][image2]
 ![alt text][image3]
-f![alt text][image4]
+![alt text][image4]
 ![alt text][image5]
 ![alt text][image6]
 ![alt text][image7]
@@ -97,9 +104,16 @@ Also, the position of the vehicle can be related by extracting the coordinates o
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-nuI defined a f`pol   Here is an example of my result on a test image:
+I defined a function `polyfil` to create the shaded green area on my test images, shown here:
 
-![alt text][image6]
+![alt text][image14]
+![alt text][image15]
+![alt text][image16]
+![alt text][image17]
+![alt text][image18]
+![alt text][image19]
+![alt text][image20]
+![alt text][image21]
 
 ---
 
