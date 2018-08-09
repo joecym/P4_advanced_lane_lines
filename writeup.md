@@ -138,6 +138,13 @@ Here's a [link to my video result](https://youtu.be/beTpjntwyo8)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
+*Updates from second submission*
+I fixed the display of the distored image and replaced it with the undistorted image. This helped me adjust the source points more finely. I also borrowed the destination points from the example writeup, which game me a larger field of view than what I had before.
+
+I added an image with a `printToPic` function that displays the curvature and the deviation from center. I used this for debugging but took it out of my final submission last time.
+
+From my first submisstion...
+
 I honestly had the most issues storing and appending the desired arrays in global variables. For some reason it was challenging to perform the appending and averaging over the correct axes, so it took me some time. The other challenge was fine tuning the source and destination points to accomplish the top-down perspective transform. I saw from the writeup template that you made a clever way to perform this automatically based on the image dimensions, which was a nice way to do it. My implementation won't work on other videos because the images are slightly different. 
 
 To make it more robust, I would not hard code values for source points. I would also use some more advanced schemes for line smoothing, instead of a straight average of the last three frames. Using a differential method might be my next step. 
