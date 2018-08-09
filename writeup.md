@@ -97,7 +97,6 @@ Then I then used the implementation from the lessons to fit a polynomial to the 
 ![alt text][image12]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
-
 In the 20th code box, I defined a function to evaluate the curvature and the deviation from the center of the image, in meters. Here is and example:
 
 ![alt text][image22]
@@ -139,7 +138,10 @@ Here's a [link to my video result](https://youtu.be/beTpjntwyo8)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-*Updates from second submission*
+Updates from second submission...
+
+I used the first calibration image, instead of the third. I skipped the first one before because it threw an error. I went back and figured out that the corners were now 9x5, not 9x6 as was recommended in the hints. 
+
 I fixed the display of the distored image and replaced it with the undistorted image. This helped me adjust the source points more finely. I also borrowed the destination points from the example writeup, which game me a larger field of view than what I had before.
 
 I added an image with a `printToPic` function that displays the curvature and the deviation from center. I used this for debugging but took it out of my final submission last time.
