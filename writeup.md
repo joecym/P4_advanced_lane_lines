@@ -89,6 +89,7 @@ The code for my perspective transform includes a function called `unwarp_lane()`
 
 ![alt text][image11]
 
+
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Then I then used the implementation from the lessons to fit a polynomial to the found lane pixels with the window method. Here is the result:
@@ -142,6 +143,8 @@ Here's a [link to my video result](https://youtu.be/beTpjntwyo8)
 I fixed the display of the distored image and replaced it with the undistorted image. This helped me adjust the source points more finely. I also borrowed the destination points from the example writeup, which game me a larger field of view than what I had before.
 
 I added an image with a `printToPic` function that displays the curvature and the deviation from center. I used this for debugging but took it out of my final submission last time.
+
+I also updated my `process_image` function to include thresholds for the near and far endpoints of the curves. On my last submission, my stragety used the far endpoints only, when I thought I was using the near ones (I assumed the beginning of the line corresponded to the first element, but it is in fact the other way around). 
 
 From my first submisstion...
 
