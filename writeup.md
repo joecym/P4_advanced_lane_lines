@@ -35,6 +35,7 @@ The goals / steps of this project are the following:
 [image19]: ./output_images/poly5.jpg "Poly Image 6"
 [image20]: ./output_images/poly6.jpg "Poly Image 7"
 [image21]: ./output_images/poly7.jpg "Poly Image 8"
+[image22]: ./output_images/final.JPG "Final Image"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -75,7 +76,6 @@ In this step, I used the same mtx and dist that I found from the chessboard cali
 ![alt text][image9]
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
-
 In the 5th input box of my notebook, I consolidated the various transform functions from the lessons, and then applied each to all of the test images, forming a grid of images and the effects. 
 
 After some thought and review of the lessons, I abandoned this approach and used the built-in OpenCV functions for the HLS and Sobel transforms. I then used thresholds for the x gradient and color channel and combined the effects on a single binary image. Here is the result:
@@ -97,9 +97,9 @@ Then I then used the implementation from the lessons to fit a polynomial to the 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-In the 20th code box, I defined a function to evaluate the curvature and here are the resulting left and right curvatures for each of the eight test images:
+In the 20th code box, I defined a function to evaluate the curvature and the deviation from the center of the image, in meters. Here is and example:
 
-![alt text][image13]
+![alt text][image22]
 
 Also, the position of the vehicle can be related by extracting the coordinates of the start of the left and right lane curves, and then comparing the differnece to the coordinate of the center of the image. 
 
@@ -130,7 +130,7 @@ I stored the curves in `line.allx` that my conditional statements deemed to be a
 
 I then drew the shaded green area as done previously.
 
-Here's a [link to my video result](https://youtu.be/MmToBpwUnKw)
+Here's a [link to my video result](https://youtu.be/beTpjntwyo8)
 
 ---
 
